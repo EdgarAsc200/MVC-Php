@@ -1,2 +1,2 @@
 # MVC-Php
-Primer Proecto MVC en php
+Primer Proyecto MVC en php
