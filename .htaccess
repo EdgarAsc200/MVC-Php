@@ -1,0 +1,13 @@
+RewriteEngine On
+
+Options All -Indexes
+# Stop processing if already in the /views directory
+RewriteRule ^views/ - [L]
+
+# Static resources if they exist
+RewriteCond %{DOCUMENT_ROOT}/views/$1 -f
+RewriteRule (.+) views/$1 [L]
+
+
+# Route all other requests
+RewriteRule (.*) index.php [L]
